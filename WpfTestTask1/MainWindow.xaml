@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfTestTask1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTestTask1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <ScrollViewer>
+        
+        <Grid x:Name="myGrid">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="32"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+            <WrapPanel Margin="0,5,0,0">
+                <Label Margin="5,0,0,0">Идентификаторы строк:</Label>
+                <TextBox x:Name="TexBox" Width="300" Height="20" Margin="5,0,0,0" TextChanged="Listener" />
+                <Button x:Name="Button" Width="100" Height="20" Margin="5,0,0,0" Content="Подсчитать" Click="ButtonClick" />
+            </WrapPanel>
+            <Grid x:Name="searchGrid" Grid.Row="1"/>
+        </Grid>
+    </ScrollViewer>
+</Window>
